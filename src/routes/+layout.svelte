@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>{config.title}</title>
+	<title>{config.title}{config.description ? ` | ${config.description}` : ''}</title>
 	<meta name="description" content={config.description} />
 	<meta name="author" content={config.author} />
 	<meta name="keywords" content={config.keywords} />

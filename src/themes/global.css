@@ -20,8 +20,8 @@ body.cyberpunk {
 }
 
 body.academic {
-  --bg-color: #fdf6e3;
-  --text-color: #333333;
+  --bg-color: rgb(255, 252, 243);
+    --text-color: #464646;
   --accent-color: #d33682;
   --font-family: "Songti SC", "STSong", "SimSun", "PMingLiU", serif;
   }
@@ -33,24 +33,29 @@ body.bento {
 }
 
 body.pixel {
-  --bg-color: #fdf6e3;
-  --text-color: #586e75;
-  --accent-color: #2aa198;
+  --bg-color: #fff0f5;
+    --text-color: #4a4e69;
+    --accent-color: #ff6b6b;
   --card-bg: #ffffff;
-  --border-color: #002b36;
+  --border-color: #9d8189;
   --font-family: 'zpix', monospace;
   -webkit-font-smoothing: none;
 }
 
+body.classic {
+  --bg-color: #ffffff;
+  --text-color: #1d1d1f;
+  --accent-color: #FCB828;
+}
 body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-family);
-  line-height: 1.4;
-  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
 }
+
 ul {
   list-style-type: disc;
   padding-left: 1.5rem;

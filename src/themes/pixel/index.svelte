@@ -25,16 +25,16 @@
 <svelte:window onscroll={handleScroll} />
 
 <div
-  class="min-h-screen max-w-3xl mx-auto p-4 sm:p-8 selection:bg-[var(--text-color)]/20 selection:text-[var(--bg-color)]"
+  class="min-h-screen max-w-2xl mx-auto p-4 sm:p-8 selection:bg-[var(--text-color)]/20 selection:text-[var(--bg-color)]"
 >
   <header class="mb-12 flex items-end justify-between border-b-2 border-[var(--text-color)] px-2 pb-4 relative">
     <div>
       <h1
-        class="text-4xl text-[var(--accent-color)] drop-shadow-[2px_2px_0_rgba(181,137,0,0.2)] uppercase tracking-wider"
+        class="text-4xl text-[var(--accent-color)] drop-shadow-[3px_3px_0_var(--border-color)] uppercase tracking-wider font-black"
       >
         {config.title}
       </h1>
-      <p class="mt-2 text-[var(--text-color)] font-bold opacity-80 uppercase text-[10px]">Version 1.0.0 [Light]</p>
+      <p class="mt-2 text-[var(--text-color)] font-bold opacity-80 uppercase text-[10px] tracking-widest">Version 2.0.0 [Kawaii]</p>
       
       {#if memoList.selectedTag}
         <div class="mt-6 flex items-center gap-3 animate-in fade-in slide-in-from-left-2 duration-300">
@@ -58,43 +58,44 @@
   <div class="mx-auto grid grid-cols-1 gap-8 2xl:grid-cols-2" data-selected-tag={memoList.selectedTag}>
     {#each memoList.visibleMemos as memo}
       <article
-        class="window-frame relative flex flex-col bg-[var(--card-bg)] border-2 border-[var(--border-color)] shadow-[6px_6px_0_0_rgba(0,43,54,0.15)] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_rgba(0,43,54,0.15)] transition-all duration-200"
+        class="window-frame relative flex flex-col bg-[var(--card-bg)] border-2 border-[var(--border-color)] shadow-[4px_4px_0_0_var(--accent-color)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_var(--accent-color)] transition-all duration-200 rounded-xl overflow-hidden"
+        id={memo.slug}
       >
         <div
-          class="flex items-center justify-between border-b-2 border-[var(--border-color)] bg-[var(--bg-color)] px-2 py-1 text-xs"
+          class="flex items-center justify-between border-b-2 border-[var(--border-color)] bg-[var(--bg-color)] px-3 py-2 text-xs"
         >
-          <span class="text-[var(--border-color)] font-bold truncate max-w-[70%]"
-            >{config.author}://{format(new Date(memo.date), 'yyyy/MM/dd')}</span
+          <span class="text-[var(--text-color)] font-bold truncate max-w-[70%] opacity-70"
+            >♥ {format(new Date(memo.date), 'yyyy/MM/dd')}</span
           >
           <div class="flex gap-1.5">
             <button
               aria-label="Minimize"
-              class="flex h-3 w-3 items-center justify-center border border-[var(--border-color)] bg-[var(--accent-color)] hover:brightness-110 text-white font-bold leading-none shadow-[1px_1px_0_0_var(--border-color)] active:translate-y-[1px] active:shadow-none transition-all"
+              class="flex h-3 w-3 items-center justify-center rounded-full bg-[#ffd93d] hover:brightness-110 border border-[var(--border-color)] transition-all"
             ></button>
             <button
               aria-label="Close"
-              class="flex h-3 w-3 items-center justify-center border border-[var(--border-color)] bg-[#dc322f] hover:brightness-110 text-white font-bold leading-none shadow-[1px_1px_0_0_var(--border-color)] active:translate-y-[1px] active:shadow-none transition-all"
+              class="flex h-3 w-3 items-center justify-center rounded-full bg-[#ff6b6b] hover:brightness-110 border border-[var(--border-color)] transition-all"
             ></button>
           </div>
         </div>
 
-        <div class="flex-1 py-1 px-4">
+        <div class="flex-1 py-4 px-5">
           <div
-            class="leading-relaxed max-w-none text-[0.95rem] text-[var(--text-color)]
-                        [&_h1]:text-[1.2rem] [&_h1]:font-black [&_h1]:mb-4 [&_h1]:mt-5 [&_h1]:text-[var(--border-color)] [&_h1]:tracking-wider
-                        [&_h2]:text-[1.1rem] [&_h2]:font-bold [&_h2]:mb-3 [&_h2]:mt-4 [&_h2]:text-[var(--border-color)] [&_h2]:tracking-wider
-                        [&_h3]:text-[1.0rem] [&_h3]:font-bold [&_h3]:mb-2 [&_h3]:mt-3 [&_h3]:text-[var(--border-color)] [&_h3]:tracking-wider
-                        [&_h4]:text-[0.9rem] [&_h4]:font-bold [&_h4]:mb-2 [&_h4]:mt-2 [&_h4]:text-[var(--border-color)] [&_h4]:tracking-wider
-                        [&_h5]:text-[0.8rem] [&_h5]:font-bold [&_h5]:italic [&_h5]:mb-2 [&_h5]:text-[var(--border-color)] [&_h5]:tracking-wider
+            class="max-w-none text-[0.95rem] text-[var(--text-color)]
+                        [&_h1]:text-[1.2rem] [&_h1]:font-black [&_h1]:mb-4 [&_h1]:mt-5 [&_h1]:text-[var(--accent-color)]
+                        [&_h2]:text-[1.1rem] [&_h2]:font-bold [&_h2]:mb-3 [&_h2]:mt-4 [&_h2]:text-[var(--accent-color)]
+                        [&_h3]:text-[1.0rem] [&_h3]:font-bold [&_h3]:mb-2 [&_h3]:mt-3 [&_h3]:text-[var(--accent-color)]
+                        [&_h4]:text-[0.9rem] [&_h4]:font-bold [&_h4]:mb-2 [&_h4]:mt-2 [&_h4]:text-[var(--accent-color)]
+                        [&_h5]:text-[0.8rem] [&_h5]:font-bold [&_h5]:italic [&_h5]:mb-2 [&_h5]:text-[var(--accent-color)]
                         [&_p]:my-3
-                        [&_a]:text-[var(--accent-color)] [&_a]:font-bold [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-2 [&_a]:hover:bg-[var(--accent-color)] [&_a]:hover:text-white
+                        [&_a]:text-[var(--accent-color)] [&_a]:font-bold [&_a]:underline [&_a]:underline-offset-2 [&_a]:decoration-2 [&_a]:decoration-dotted [&_a]:hover:text-[var(--border-color)]
                         [&_strong]:text-[var(--accent-color)]
-                        [&_code]:bg-[var(--bg-color)] [&_code]:text-[var(--accent-color)] [&_code]:px-1 [&_code]:border [&_code]:border-[var(--text-color)]/20
+                        [&_code]:bg-[var(--bg-color)] [&_code]:text-[var(--accent-color)] [&_code]:px-1 [&_code]:rounded-md
                         [&_table]:w-full [&_table]:border-collapse [&_table]:my-4 [&_table]:text-xs [&_table]:border-2 [&_table]:border-[var(--border-color)]
-                        [&_th]:bg-[var(--bg-color)] [&_th]:text-[var(--border-color)] [&_th]:p-2 [&_th]:border-b-2 [&_th]:border-dashed [&_th]:border-[var(--border-color)] [&_th]:text-center
-                        [&_td]:p-2 [&_td]:border-b [&_td]:border-dashed [&_td]:border-[var(--border-color)] [&_td]:text-center
-                        [&_blockquote]:border-l-4 [&_blockquote]:border-[#859900] [&_blockquote]:bg-[#f9f2f4] [&_blockquote]:py-1 [&_blockquote]:px-4 [&_blockquote]:my-4 [&_blockquote]:italic [&_blockquote]:text-[0.9rem] [&_blockquote]:text-[#657b83]
-                        [&_.tag-link]:bg-[var(--bg-color)] [&_.tag-link]:text-[var(--accent-color)] [&_.tag-link]:px-1 [&_.tag-link]:border [&_.tag-link]:border-[var(--border-color)] [&_.tag-link]:shadow-[1px_1px_0_0_var(--border-color)] [&_.tag-link]:text-[10px] [&_.tag-link]:no-underline [&_.tag-link]:mx-0.5 [&_.tag-link]:font-bold [&_.tag-link]:transition-all
+                        [&_th]:bg-[var(--bg-color)] [&_th]:text-[var(--text-color)] [&_th]:p-2 [&_th]:border-b-2 [&_th]:border-[var(--border-color)] [&_th]:text-center
+                        [&_td]:p-2 [&_td]:border-b [&_td]:border-[var(--border-color)] [&_td]:text-center
+                        [&_blockquote]:border-l-4 [&_blockquote]:border-[var(--accent-color)] [&_blockquote]:bg-[var(--bg-color)] [&_blockquote]:py-2 [&_blockquote]:px-4 [&_blockquote]:my-4 [&_blockquote]:italic [&_blockquote]:text-[0.9rem] [&_blockquote]:text-[var(--text-color)] [&_blockquote]:rounded-r-lg
+                        [&_.tag-link]:bg-[var(--bg-color)] [&_.tag-link]:text-[var(--accent-color)] [&_.tag-link]:px-2 [&_.tag-link]:py-0.5 [&_.tag-link]:rounded-full [&_.tag-link]:text-[10px] [&_.tag-link]:no-underline [&_.tag-link]:mx-0.5 [&_.tag-link]:font-bold [&_.tag-link]:transition-all [&_.tag-link]:hover:scale-110
                         "
              onclick={(e) => {
                 const target = e.target as HTMLElement;
@@ -109,9 +110,9 @@
         </div>
 
         <div
-          class="mt-auto border-t-2 border-[var(--border-color)] bg-[var(--bg-color)] px-2 py-1 text-[10px] text-[var(--text-color)] flex justify-between items-center"
+          class="mt-auto border-t-2 border-[var(--border-color)] bg-[var(--bg-color)] px-3 py-1.5 text-[10px] text-[var(--text-color)] flex justify-between items-center opacity-80"
         >
-          <span class="font-bold text-[var(--accent-color)]">{format(new Date(memo.date), 'HH:mm:ss')}</span>
+          <span class="font-bold text-[var(--accent-color)]">★ {format(new Date(memo.date), 'HH:mm')}</span>
         </div>
 
         <div
@@ -141,18 +142,18 @@
         <img
           src={pixelRun}
           alt="Running Avatar"
-          class="h-full w-full object-contain drop-shadow-[4px_4px_0_rgba(0,0,0,0.2)]"
+          class="h-full w-full object-contain drop-shadow-[4px_4px_0_rgba(0,0,0,0.1)]"
         />
       {:else}
         <img
           src={pixelIdle}
           alt="Idle Avatar"
-          class="h-full w-full object-contain drop-shadow-[4px_4px_0_rgba(0,0,0,0.2)]"
+          class="h-full w-full object-contain drop-shadow-[4px_4px_0_rgba(0,0,0,0.1)]"
         />
       {/if}
     </div>
     <div
-      class="absolute -top-12 -right-4 whitespace-nowrap bg-[var(--card-bg)] border-2 border-[var(--border-color)] px-2 py-1 text-[10px] text-[var(--border-color)] shadow-[2px_2px_0_0_rgba(0,0,0,0.1)] opacity-0 transition-opacity duration-300"
+      class="absolute -top-12 -right-4 whitespace-nowrap bg-[var(--card-bg)] border-2 border-[var(--border-color)] px-2 py-1 text-[10px] text-[var(--text-color)] shadow-[2px_2px_0_0_var(--accent-color)] opacity-0 transition-opacity duration-300 rounded-lg"
       class:opacity-100={!isMoving}
     >
       I'm watching you.

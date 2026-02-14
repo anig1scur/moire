@@ -15,7 +15,7 @@
     <aside class="md:col-span-3 md:border-r border-[var(--text-color)]/10 md:pr-8 md:text-right">
       <header class="sticky top-10">
         <h1 class="text-4xl font-black italic mb-4 text-[var(--accent-color)] tracking-tight">{config.title}</h1>
-        <div class="text-sm text-[var(--text-color)]/60 italic mb-8 leading-relaxed">
+        <div class="text-sm text-[var(--text-color)]/60 italic mb-8">
           <p>{config.description}</p>
           <p class="mt-4">— {config.author}</p>
         </div>
@@ -65,30 +65,31 @@
 
           <div class="space-y-14">
             {#each memos as memo}
-              <article class="group relative">
-                <div class="absolute -left-20 top-2 hidden xl:block text-[10px] font-bold tracking-widest text-[var(--text-color)]/30 w-12 text-right uppercase">
+              <article class="group relative" id={memo.slug}>
+                <div class="absolute -left-20 top-2 hidden xl:block text-xs font-bold tracking-widest text-[var(--text-color)]/30 w-12 text-right uppercase">
                   {format(memo.date, 'HH:mm')}
                 </div>
 
-                <div class="xl:hidden text-[10px] font-bold tracking-widest text-[var(--text-color)]/30 mb-3 uppercase">
+                <div class="xl:hidden text-sm font-bold tracking-widest text-[var(--text-color)]/30 mb-3 uppercase">
                   {format(memo.date, 'HH:mm')}
                 </div>
 
                 <div
-                  class="max-w-none text-[1.05rem] leading-relaxed text-[var(--text-color)]/90
-                        [&_h1]:text-[1.35rem] [&_h1]:font-bold [&_h1]:italic [&_h1]:mb-5 [&_h1]:mt-7 [&_h1]:text-[var(--text-color)]
-                        [&_h2]:text-[1.25rem] [&_h2]:font-bold [&_h2]:italic [&_h2]:mb-4 [&_h2]:mt-6 [&_h2]:text-[var(--text-color)]
-                        [&_h3]:text-[1.1rem] [&_h3]:font-bold [&_h3]:italic [&_h3]:mb-3 [&_h3]:mt-5 [&_h3]:text-[var(--text-color)]
-                        [&_h4]:text-[1rem] [&_h4]:font-bold [&_h4]:italic [&_h4]:mb-3 [&_h4]:mt-4 [&_h4]:text-[var(--text-color)]/80
-                        [&_h5]:text-[0.9rem] [&_h5]:font-bold [&_h5]:italic [&_h5]:mb-2 [&_h5]:mt-3 [&_h5]:text-[var(--text-color)]/70
+                  class="max-w-none text-[var(--text-color)]/90
+                        [&_h1]:text-[1.35rem] [&_h1]:font-bold [&_h1]:mb-5 [&_h1]:mt-7 [&_h1]:text-[var(--text-color)]
+                        [&_h2]:text-[1.25rem] [&_h2]:font-bold [&_h2]:mb-4 [&_h2]:mt-6 [&_h2]:text-[var(--text-color)]
+                        [&_h3]:text-[1.1rem] [&_h3]:font-bold [&_h3]:mb-3 [&_h3]:mt-5 [&_h3]:text-[var(--text-color)]
+                        [&_h4]:text-[1rem] [&_h4]:font-bold [&_h4]:mb-3 [&_h4]:mt-4 [&_h4]:text-[var(--text-color)]/80
+                        [&_h5]:text-[0.9rem] [&_h5]:font-bold [&_h5]:mb-2 [&_h5]:mt-3 [&_h5]:text-[var(--text-color)]/70
                         [&_a]:text-[var(--accent-color)] [&_a]:no-underline [&_a]:border-b [&_a]:border-[var(--accent-color)]/30 [&_a]:underline-offset-4 [&_a]:hover:border-[var(--accent-color)] [&_a]:hover:bg-[var(--accent-color)]/5 [&_a]:transition-all
                         [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:my-4 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:my-4
+                        [&_p]:my-4
                         [&_table]:border-collapse [&_table]:border-y-1 [&_table]:border-black [&_table]:my-6 [&_table]:w-full [&_table]:text-sm
                         [&_th]:border-b-1 [&_th]:border-black [&_th]:border-dashed [&_th]:font-bold [&_th]:p-3 [&_th]:text-center [&_th]:uppercase
                         [&_td]:border-b [&_td]:border-[var(--text-color)]/10 [&_td]:border-dashed [&_td]:p-3 [&_td]:text-center
-                        [&_blockquote]:border-l-4 [&_blockquote]:italic [&_blockquote]:border-[var(--accent-color)] [&_blockquote]:bg-[var(--accent-color)]/5 [&_blockquote]:py-2 [&_blockquote]:px-4 [&_blockquote]:my-4 [&_blockquote]:not-italic [&_blockquote]:text-[0.95rem] [&_blockquote]:text-[var(--text-color)]/80 [&_blockquote]:rounded-r-sm
-                        [&_img]:shadow-2xl [&_img]:rounded-sm [&_img]:border-[6px] [&_img]:border-white [&_img]:rotate-1 group-hover:[&_img]:rotate-0 [&_img]:transition-all [&_img]:duration-700
-                        [&_.tag-link]:text-[10px] [&_.tag-link]:mx-1 [&_.tag-link]:font-bold [&_.tag-link]:uppercase [&_.tag-link]:tracking-wider [&_.tag-link]:text-[var(--text-color)]/30 [&_.tag-link:hover]:text-[var(--accent-color)] [&_.tag-link:hover]:underline [&_.tag-link]:no-underline [&_.tag-link]:transition-colors"
+                        [&_blockquote]:border-l-4 [&_blockquote]:italic [&_blockquote]:border-[var(--accent-color)] [&_blockquote]:bg-[var(--accent-color)]/5 [&_blockquote_p]:py-3 [&_blockquote]:px-4 [&_blockquote]:my-4 [&_blockquote]:not-italic [&_blockquote]:text-[0.95rem] [&_blockquote]:text-[var(--text-color)]/80 [&_blockquote]:rounded-r-sm
+                        [&_img]:rounded-sm [&_img]:border-[6px] [&_img]:border-white [&_img]:rotate-1 group-hover:[&_img]:rotate-0 [&_img]:transition-all [&_img]:duration-700
+                        [&_.tag-link]:text-xs [&_.tag-link]:mx-1 [&_.tag-link]:font-bold [&_.tag-link]:uppercase [&_.tag-link]:tracking-wider [&_.tag-link]:text-[var(--text-color)]/30 [&_.tag-link:hover]:text-[var(--accent-color)] [&_.tag-link:hover]:underline [&_.tag-link]:no-underline [&_.tag-link]:transition-colors"
                   onclick={(e) => {
                       const target = e.target as HTMLElement;
                       if (target.classList.contains('tag-link')) {
