@@ -8,8 +8,8 @@
 </script>
 
 <div class="min-h-screen bg-white text-[0.95rem] {config.theme}">
-  <div class="max-w-2xl mx-auto">
-    <header class="bg-white px-6 pt-12 pb-6 md:pb-12">
+  <div class="max-w-2xl mx-auto px-6 md:px-12 mb-6">
+    <header class="bg-white pt-12 pb-6 md:pb-12">
       <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-4">
         <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4">
           <h1 class="text-3xl font-bold tracking-tight text-gray-900">{config.title}</h1>
@@ -32,7 +32,7 @@
 
     <div class="divide-y divide-gray-100">
       {#each memoList.visibleMemos as memo}
-        <article class="p-6" id={memo.slug}>
+        <article class="py-6" id={memo.slug}>
           <div class="text-[0.75rem] font-400 text-gray-500 mb-2">{format(memo.date, 'MMMM d, yyyy')}</div>
           <div 
             class=" leading-[1.8] text-gray-800
