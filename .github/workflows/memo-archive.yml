@@ -20,6 +20,12 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
+          if [ ! -d "src/memos" ]; then
+            echo "Directory src/memos not found. Skipping archive."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
           LAST_TAG=$(git describe --tags --match "archive-*" --abbrev=0 2>/dev/null || echo "")
           
           if [ -z "$LAST_TAG" ]; then
@@ -44,12 +50,8 @@ jobs:
       - name: Create archive
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          if [ -d "src/memos" ]; then
-            zip -r memos-${{ steps.date.outputs.date }}.zip src/memos
-          else
-            echo "Directory src/memos not found!"
-            exit 1
-          fi
+          cd src
+          zip -r ../memos-${{ steps.date.outputs.date }}.zip memos
 
       - name: Create Release
         if: steps.check_changes.outputs.has_changes == 'true'

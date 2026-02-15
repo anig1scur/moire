@@ -55,11 +55,11 @@
           {#each memos as memo}
             <div class="flex gap-3 mb-4 items-start" id={memo.slug}>
               <div class="flex flex-col items-center gap-1 w-10 shrink-0 mt-4">
-                <div class="w-8 h-8 bg-black rounded-full overflow-hidden">
+                <div class="w-8 h-8 rounded-full overflow-hidden">
                   <img
                     src={avatar}
                     alt="User"
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-contain"
                     onerror={(e) => ((e.currentTarget as HTMLImageElement).style.display = 'none')}
                   />
                 </div>
