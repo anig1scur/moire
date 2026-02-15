@@ -8,7 +8,7 @@
 </script>
 
 <div class="min-h-screen bg-white text-[0.95rem] {config.theme}">
-  <div class="max-w-2xl mx-auto px-6 md:px-12 mb-6">
+  <div class="max-w-2xl mx-auto px-5 md:px-12 mb-6">
     <header class="bg-white pt-12 pb-6 md:pb-12">
       <div class="flex flex-col md:flex-row md:items-baseline justify-between gap-4">
         <div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-4">
