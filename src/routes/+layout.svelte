@@ -3,13 +3,21 @@
 	import '$themes/global.css';
 
 	import { config } from '../../moire.config';
+  import { init, trackEvent } from '@aptabase/web';
+  import { page } from '$app/state';
 
 	let { children } = $props();
+
+  init('A-US-7287213050');
 
 	$effect(() => {
 		document.body.classList.add(config.theme);
 		return () => document.body.classList.remove(config.theme);
 	});
+
+  $effect(() => {
+    trackEvent('page_view', { path: page.url.pathname });
+  });
 </script>
 
 <svelte:head>
