@@ -107,6 +107,9 @@
                         [&_td]:border-b [&_td]:border-[var(--text-color)]/10 [&_td]:border-dashed [&_td]:p-3 [&_td]:text-center
                         [&_blockquote]:border-l-4 [&_blockquote]:italic [&_blockquote]:border-[var(--accent-color)] [&_blockquote]:bg-[var(--accent-color)]/5 [&_blockquote_p]:py-3 [&_blockquote]:px-4 [&_blockquote]:my-4 [&_blockquote]:not-italic [&_blockquote]:text-[0.95rem] [&_blockquote]:text-[var(--text-color)]/80 [&_blockquote]:rounded-r-sm
                         [&_img]:rounded-sm [&_img]:border-[6px] [&_img]:border-white [&_img]:rotate-1 group-hover:[&_img]:rotate-0 [&_img]:transition-all [&_img]:duration-700
+                        [&_code]:text-[0.85rem] [&_code]:bg-[var(--text-color)]/10 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded-sm [&_code]:font-mono
+                        [&_pre]:bg-[var(--text-color)]/5 [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:my-6 [&_pre]:border-l-4 [&_pre]:border-[var(--text-color)]/20 [&_pre]:text-sm
+                        [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-inherit
                         [&_.tag-link]:text-xs [&_.tag-link]:mx-1 [&_.tag-link]:font-bold [&_.tag-link]:uppercase [&_.tag-link]:tracking-wider [&_.tag-link]:text-[var(--text-color)]/30 [&_.tag-link:hover]:text-[var(--accent-color)] [&_.tag-link:hover]:underline [&_.tag-link]:no-underline [&_.tag-link]:transition-colors"
                   onclick={(e) => {
                     const target = e.target as HTMLElement;

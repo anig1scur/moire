@@ -78,6 +78,9 @@
                   [&_th]:border-b-2 [&_th]:border-black [&_th]:border-dashed [&_th]:py-1 [&_th]:uppercase
                   [&_td]:py-1 [&_td]:px-1 [&_td]:border-b [&_td]:border-[#ccc] [&_td]:border-dashed
                   [&_blockquote]:border-l-4 [&_blockquote]:border-black [&_blockquote]:pl-4 [&_blockquote]:py-1 [&_blockquote]:my-4 [&_blockquote]:italic [&_blockquote]:text-[0.9rem] [&_blockquote]:bg-black/5
+                  [&_code]:font-mono [&_code]:bg-black/5 [&_code]:px-1
+                  [&_pre]:border-y-2 [&_pre]:border-dashed [&_pre]:border-[#ccc] [&_pre]:py-3 [&_pre]:my-4 [&_pre]:overflow-x-auto [&_pre]:text-xs
+                  [&_pre_code]:bg-transparent [&_pre_code]:p-0
                   [&_.tag-link]:bg-transparent [&_.tag-link]:font-bold [&_.tag-link]:underline [&_.tag-link]:decoration-dashed [&_.tag-link]:underline-offset-3 [&_.tag-link]:hover:bg-black [&_.tag-link]:hover:text-white
                 "
               >

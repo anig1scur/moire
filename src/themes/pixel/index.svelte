@@ -95,6 +95,8 @@
                         [&_th]:bg-[var(--bg-color)] [&_th]:text-[var(--text-color)] [&_th]:p-2 [&_th]:border-b-2 [&_th]:border-[var(--border-color)] [&_th]:text-center
                         [&_td]:p-2 [&_td]:border-b [&_td]:border-[var(--border-color)] [&_td]:text-center
                         [&_blockquote]:border-l-4 [&_blockquote]:border-[var(--accent-color)] [&_blockquote]:bg-[var(--bg-color)] [&_blockquote]:py-2 [&_blockquote]:px-4 [&_blockquote]:my-4 [&_blockquote]:italic [&_blockquote]:text-[0.9rem] [&_blockquote]:text-[var(--text-color)] [&_blockquote]:rounded-r-lg
+                        [&_pre]:bg-[var(--bg-color)] [&_pre]:border-2 [&_pre]:border-[var(--border-color)] [&_pre]:p-3 [&_pre]:overflow-x-auto [&_pre]:my-4 [&_pre]:text-sm
+                        [&_pre_code]:bg-transparent [&_pre_code]:text-[var(--text-color)] [&_pre_code]:p-0
                         [&_.tag-link]:bg-[var(--bg-color)] [&_.tag-link]:text-[var(--accent-color)] [&_.tag-link]:px-2 [&_.tag-link]:py-0.5 [&_.tag-link]:rounded-full [&_.tag-link]:text-[11px] [&_.tag-link]:no-underline [&_.tag-link]:mx-0.5 [&_.tag-link]:font-bold [&_.tag-link]:transition-all [&_.tag-link]:hover:scale-110
                         "
              onclick={(e) => {

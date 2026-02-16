@@ -136,6 +136,8 @@
                    [&_th]:bg-[var(--accent-color)]/10 [&_th]:text-[var(--accent-color)] [&_th]:p-3 [&_th]:border-b-2 [&_th]:border-dashed [&_th]:border-[var(--accent-color)]/50 [&_th]:uppercase [&_th]:tracking-wider [&_th]:text-center
                    [&_td]:p-3 [&_td]:border-b [&_td]:border-dashed [&_td]:border-[var(--accent-color)]/30 [&_td]:text-center
                    [&_blockquote]:border-l-4 [&_blockquote]:border-[var(--accent-color)] [&_blockquote]:pl-4 [&_blockquote]:py-1 [&_blockquote]:my-3 [&_blockquote]:italic [&_blockquote]:text-[0.95rem] [&_blockquote]:bg-[var(--accent-color)]/5
+                   [&_pre]:bg-black/40 [&_pre]:border [&_pre]:border-[var(--accent-color)]/30 [&_pre]:p-4 [&_pre]:overflow-x-auto [&_pre]:my-4 [&_pre]:text-sm
+                   [&_pre_code]:text-[var(--accent-color)] [&_pre_code]:bg-transparent [&_pre_code]:p-0
                    [&_.tag-link]:inline-block [&_.tag-link]:px-2 [&_.tag-link]:py-0.5 [&_.tag-link]:border [&_.tag-link]:border-[var(--text-color)]/30 [&_.tag-link]:text-[10px] [&_.tag-link]:tracking-widest [&_.tag-link]:uppercase [&_.tag-link]:text-[var(--text-color)]/60 [&_.tag-link:hover]:bg-[var(--text-color)] [&_.tag-link:hover]:text-[var(--bg-color)] [&_.tag-link]:transition-colors [&_.tag-link]:cursor-pointer [&_.tag-link]:no-underline"
           onclick={(e) => {
             const target = e.target as HTMLElement;
