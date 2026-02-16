@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@aptabase/web':
+        specifier: ^0.5.0
+        version: 0.5.0
       '@types/marked':
         specifier: ^5.0.2
         version: 5.0.2
@@ -53,6 +56,9 @@ importers:
         version: 7.3.1(jiti@2.6.1)(lightningcss@1.30.2)
 
 packages:
+
+  '@aptabase/web@0.5.0':
+    resolution: {integrity: sha512-+RFdaS0bLJtqTZyB1uG32S7tuTfJTGbG2bkdVMs3AT7yG7DP2yb6JY5rZoBf3UyW9sigFHGRkbXoAXdCMZibWA==}
 
   '@esbuild/aix-ppc64@0.27.2':
     resolution: {integrity: sha512-GZMB+a0mOMZs4MpDbj8RJp4cw+w1WV5NYD6xzgvzUJ5Ek2jerwfO2eADyI6ExDSUED+1X8aMbegahsJi+8mgpw==}
@@ -897,6 +903,8 @@ packages:
     resolution: {integrity: sha512-B58NGBEoc8Y9MWWCQGl/gq9xBCe4IiKM0a2x7GZdQKOW5Exr8S1W24J6OgM1njK8xCRGvAJIL/MxXHf6SkmQKQ==}
 
 snapshots:
+
+  '@aptabase/web@0.5.0': {}
 
   '@esbuild/aix-ppc64@0.27.2':
     optional: true

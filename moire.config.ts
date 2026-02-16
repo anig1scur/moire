@@ -4,7 +4,7 @@ export const config = {
   theme: "receipt",
   pageSize: 20,
   order_by: "created",
-  description: "Sync your thoughts from Apple Notes by Shortcuts.",
+  description: "Welcome to my memos in the garbage time of history",
   keywords: "memo, thought, sync, apple notes, shortcuts, ios",
-  url: "https://aeriszhu.com/moire"
+  url: "https://moire.aeriszhu.com"
 };
