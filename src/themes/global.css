@@ -78,13 +78,13 @@ a {
 
 ul {
   list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   margin-bottom: 0.5rem;
 }
 
 ol {
   list-style-type: decimal;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
   margin-bottom: 0.5rem;
 }
 

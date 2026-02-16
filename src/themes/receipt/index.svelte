@@ -12,7 +12,7 @@
 <div class="flex justify-center sm:m-10 min-h-screen {config.theme} relative isolate">
   <Background />
   <div
-    class="w-full max-w-[540px] bg-[var(--card-bg)] px-3 sm:p-6 pt-8 shadow-[0_0_10px_rgba(0,0,0,0.1)] relative drop-shadow-[0px_2px_4px_rgba(0,0,0,0.1)] sm:border-y border-dashed border-[#ccc]"
+    class="w-full max-w-[540px] bg-[var(--card-bg)] px-4 sm:p-6 pt-8 shadow-[0_0_10px_rgba(0,0,0,0.1)] relative drop-shadow-[0px_2px_4px_rgba(0,0,0,0.1)] sm:border-y border-dashed border-[#ccc]"
   >
     <header class="text-center mb-5">
       <div class="text-4xl font-black tracking-[4px] mb-2.5">{config.title.toUpperCase()}</div>
@@ -53,7 +53,7 @@
           </div>
 
           {#each memos as memo}
-            <div class="flex gap-3 mb-4 items-start" id={memo.slug}>
+            <div class="flex gap-2 mb-4 items-start -mx-1" id={memo.slug}>
               <div class="flex flex-col items-center gap-1 w-10 shrink-0 mt-4">
                 <div class="w-8 h-8 rounded-full overflow-hidden">
                   <img
