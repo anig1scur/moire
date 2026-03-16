@@ -2,6 +2,7 @@ export const config = {
   title: "Moire",
   author: "Aeris",
   theme: "receipt",
+  heatmap: true,
   pageSize: 20,
   order_by: "created",
   description: "Welcome to my memos in the garbage time of history",
